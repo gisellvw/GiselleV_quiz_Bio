@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             x:Class="MauiAppQuiz.MainPage">
+
+    <Grid>
+        <!-- Imagem de fundo -->
+        <Image Source="background_bio.jpg"
+           Aspect="AspectFill"
+           HorizontalOptions="Fill"
+           VerticalOptions="Fill" />
+
+        <!-- Scroll -->
+        <ScrollView>
+            <VerticalStackLayout Padding="30"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center">
+
+                <!-- Cartão inicial -->
+                <Border BackgroundColor="#fbfdfe"
+                    StrokeThickness="0"
+                    Padding="24"
+                    MaximumWidthRequest="320"
+                    HorizontalOptions="Center">
+
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20" />
+                    </Border.StrokeShape>
+
+                    <VerticalStackLayout Spacing="20">
+                        <Image Source="icon_bio.png"
+                           Aspect="AspectFit"
+                           HeightRequest="110"
+                           WidthRequest="290"
+                           HorizontalOptions="Center" />
+
+                        <Label Text="Teste seus conhecimentos em Biologia desafiando sua mente com perguntas sobre o universo celular, os ecossistemas terrestres, o reino vegetal e a diversidade faunística."
+                           FontSize="15"
+                           FontFamily="OpenSansRegular"
+                           LineHeight="1.2"
+                           HorizontalTextAlignment="Center"
+                           TextColor="#222222" />
+
+                        <Button Text="Começar"
+                            Clicked="OnComecarClicked"
+                            TextColor="#525b2a"
+                            FontSize="18"
+                            FontAttributes="Bold"
+                            CornerRadius="12"
+                            HeightRequest="50"
+                            BackgroundColor="#c8e44e" />
+
+                        <Label Text="© 2026 Giselle V."
+                           FontSize="13"
+                           FontFamily="OpenSansRegular"
+                           HorizontalTextAlignment="Center"
+                           TextColor="#849532" />   
+                    </VerticalStackLayout>
+                </Border>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

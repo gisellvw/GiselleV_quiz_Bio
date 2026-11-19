@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppQuiz.Questao1"
+             NavigationPage.HasBackButton="False">
+
+    <Grid RowDefinitions="Auto, *, Auto">
+
+        <!-- background -->
+        <Image Grid.RowSpan="3"
+           Source="background_questoes.png"
+           Aspect="AspectFill" />
+
+        <!-- inicio (questao) -->
+        <Grid Grid.Row="0" 
+          BackgroundColor="#a8bf42" 
+          Padding="20,15" 
+          ColumnDefinitions="*, Auto">
+            <Label Grid.Column="0"
+               Text="Questão 1"
+               FontSize="26"
+               FontFamily="OpenSansSemibold"
+               FontAttributes="Bold"
+               TextColor="#2D3B12"
+               VerticalOptions="Center" />
+
+            <Image Grid.Column="1"
+               Source="folha.png"
+               HeightRequest="30"
+               VerticalOptions="Center" />
+        </Grid>
+
+        <!-- conteudo -->
+        <ScrollView Grid.Row="1">
+            <Border BackgroundColor="#FAFCF6"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 22"
+                Margin="16,16"
+                Padding="20,22">
+
+                <VerticalStackLayout Spacing="14">
+
+                    <!-- foto -->
+                    <Border Stroke="#82A82D"
+                        StrokeThickness="2"
+                        StrokeShape="RoundRectangle 14"
+                        HeightRequest="175"
+                        HorizontalOptions="Fill">
+                        <Image Source="q1.jpg" 
+                           Aspect="AspectFill" />
+                    </Border>
+
+                    <!-- enunciado -->
+                    <Label Text="Como a mudança sazonal da pelagem da raposa-do-ártico contribui para sua camuflagem e aumenta suas chances de sobrevivência na tundra?"
+                       FontSize="17"
+                       FontFamily="OpenSansSemibold"
+                       FontAttributes="Bold"
+                       TextColor="#2D3B12"
+                       LineHeight="1.2"
+                       HorizontalTextAlignment="Start"
+                       Margin="2,6,2,8" />
+
+                    <!-- buttons alternativas -->
+                    <Button Text="A) A mudança de pelagem permite que a raposa produza calor por meio da fotossíntese durante o inverno."
+                        BackgroundColor="#EFF5DF"
+                        BorderColor="#A8BF42"
+                        BorderWidth="1.5"
+                        CornerRadius="14"
+                        FontSize="15"
+                        FontFamily="OpenSansRegular"
+                        TextColor="#2D3B12"
+                        Padding="16,14"
+                        LineBreakMode="WordWrap"
+                        x:Name="Button_alt1"
+                        Clicked="OnAlternativaClicked" />
+
+                    <Button Text="B) A alteração da cor da pelagem acompanha as mudanças sazonais da paisagem, favorecendo a camuflagem e aumentando suas chances de caçar presas e evitar predadores."
+                        BackgroundColor="#EFF5DF"
+                        BorderColor="#A8BF42"
+                        BorderWidth="1.5"
+                        CornerRadius="14"
+                        FontSize="15"
+                        FontFamily="OpenSansRegular"
+                        TextColor="#2D3B12"
+                        Padding="16,14"
+                        LineBreakMode="WordWrap"
+                        x:Name="Button_alt2"
+                        Clicked="OnAlternativaClicked" />
+
+                    <Button Text="C) A pelagem muda de cor para permitir que a raposa absorva água diretamente da neve e sobreviva sem beber."
+                        BackgroundColor="#EFF5DF"
+                        BorderColor="#A8BF42"
+                        BorderWidth="1.5"
+                        CornerRadius="14"
+                        FontSize="15"
+                        FontFamily="OpenSansRegular"
+                        TextColor="#2D3B12"
+                        Padding="16,14"
+                        LineBreakMode="WordWrap"
+                        x:Name="Button_alt3"
+                        Clicked="OnAlternativaClicked" />
+
+                    <Button Text="D) A troca de pelagem modifica o material genético da raposa a cada estação, criando novas características adaptativas durante sua vida."
+                        BackgroundColor="#EFF5DF"
+                        BorderColor="#A8BF42"
+                        BorderWidth="1.5"
+                        CornerRadius="14"
+                        FontSize="15"
+                        FontFamily="OpenSansRegular"
+                        TextColor="#2D3B12"
+                        Padding="16,14"
+                        LineBreakMode="WordWrap"
+                        x:Name="Button_alt4"
+                        Clicked="OnAlternativaClicked" />
+
+                </VerticalStackLayout>
+            </Border>
+        </ScrollView>
+
+        <!-- footer -->
+        <VerticalStackLayout Grid.Row="2" 
+                         BackgroundColor="#D93E4A1C"
+                         Padding="10">
+            <Image Source="icon_bio.png" 
+               HeightRequest="45"
+               Aspect="AspectFit"
+               HorizontalOptions="Center" />
+        </VerticalStackLayout>
+
+    </Grid>
+    
+</ContentPage>

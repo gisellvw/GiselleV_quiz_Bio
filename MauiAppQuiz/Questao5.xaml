@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppQuiz.Questao5"
+             NavigationPage.HasBackButton="False">
+    <Grid RowDefinitions="Auto, *, Auto">
+
+        <!-- background -->
+        <Image Grid.RowSpan="3"
+       Source="background_questoes.png"
+       Aspect="AspectFill" />
+
+        <!-- inicio (questao) -->
+        <Grid Grid.Row="0" 
+      BackgroundColor="#a8bf42" 
+      Padding="20,15" 
+      ColumnDefinitions="*, Auto">
+            <Label Grid.Column="0"
+           Text="Questão 5"
+           FontSize="26"
+           FontFamily="OpenSansSemibold"
+           FontAttributes="Bold"
+           TextColor="#2D3B12"
+           VerticalOptions="Center" />
+
+            <Image Grid.Column="1"
+           Source="folha.png"
+           HeightRequest="30"
+           VerticalOptions="Center" />
+        </Grid>
+
+        <!-- conteudo -->
+        <ScrollView Grid.Row="1">
+            <Border BackgroundColor="#FAFCF6"
+            StrokeThickness="0"
+            StrokeShape="RoundRectangle 22"
+            Margin="16,16"
+            Padding="20,22">
+
+                <VerticalStackLayout Spacing="14">
+
+                    <!-- foto -->
+                    <Border Stroke="#82A82D"
+                    StrokeThickness="2"
+                    StrokeShape="RoundRectangle 14"
+                    HeightRequest="175"
+                    HorizontalOptions="Fill">
+                        <Image Source="q5.jpg" 
+                       Aspect="AspectFill" />
+                    </Border>
+
+                    <!-- enunciado -->
+                    <Label Text="As borboletas passam por diferentes fases durante seu ciclo de vida, desde o nascimento até a fase adulta. Como se chama esse processo de transformação, que inclui as fases de ovo, lagarta, crisálida e borboleta adulta?"
+                   FontSize="17"
+                   FontFamily="OpenSansSemibold"
+                   FontAttributes="Bold"
+                   TextColor="#2D3B12"
+                   LineHeight="1.2"
+                   HorizontalTextAlignment="Start"
+                   Margin="2,6,2,8" />
+
+                    <!-- buttons alternativas -->
+                    <Button Text="A) Germinação"
+                    BackgroundColor="#EFF5DF"
+                    BorderColor="#A8BF42"
+                    BorderWidth="1.5"
+                    CornerRadius="14"
+                    FontSize="15"
+                    FontFamily="OpenSansRegular"
+                    TextColor="#2D3B12"
+                    Padding="16,14"
+                    LineBreakMode="WordWrap"
+                    x:Name="Button_alt1"
+                    Clicked="OnAlternativaClicked" />
+
+                    <Button Text="B) Metamorfose"
+                    BackgroundColor="#EFF5DF"
+                    BorderColor="#A8BF42"
+                    BorderWidth="1.5"
+                    CornerRadius="14"
+                    FontSize="15"
+                    FontFamily="OpenSansRegular"
+                    TextColor="#2D3B12"
+                    Padding="16,14"
+                    LineBreakMode="WordWrap"
+                    x:Name="Button_alt2"
+                    Clicked="OnAlternativaClicked" />
+
+                    <Button Text="C) Fecundação"
+                    BackgroundColor="#EFF5DF"
+                    BorderColor="#A8BF42"
+                    BorderWidth="1.5"
+                    CornerRadius="14"
+                    FontSize="15"
+                    FontFamily="OpenSansRegular"
+                    TextColor="#2D3B12"
+                    Padding="16,14"
+                    LineBreakMode="WordWrap"
+                    x:Name="Button_alt3"
+                    Clicked="OnAlternativaClicked" />
+
+                    <Button Text="D) Hibernação"
+                    BackgroundColor="#EFF5DF"
+                    BorderColor="#A8BF42"
+                    BorderWidth="1.5"
+                    CornerRadius="14"
+                    FontSize="15"
+                    FontFamily="OpenSansRegular"
+                    TextColor="#2D3B12"
+                    Padding="16,14"
+                    LineBreakMode="WordWrap"
+                    x:Name="Button_alt4"
+                    Clicked="OnAlternativaClicked" />
+
+                </VerticalStackLayout>
+            </Border>
+        </ScrollView>
+
+        <!-- footer -->
+        <VerticalStackLayout Grid.Row="2" 
+                     BackgroundColor="#D93E4A1C"
+                     Padding="10">
+            <Image Source="icon_bio.png" 
+           HeightRequest="45"
+           Aspect="AspectFit"
+           HorizontalOptions="Center" />
+        </VerticalStackLayout>
+
+    </Grid>
+</ContentPage>
